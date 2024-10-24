@@ -1,0 +1,53 @@
+###registeration
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+    "username":"asmaShaik",
+    "password":"asma@1457"
+}
+
+###login
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+     "username":"asmaShaik",
+    "password":"asma@1457"
+}
+
+###
+GET http://localhost:3000/transactions
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFzbWFTaGFpayIsImlhdCI6MTcyOTc3MDk3MH0.ZCCIAs4JmxDHAAnQC6koQLgnO2vK-sPV2YwoeMM2jQc
+###
+POST http://localhost:3000/transactions
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFzbWFTaGFpayIsImlhdCI6MTcyOTc3MDk3MH0.ZCCIAs4JmxDHAAnQC6koQLgnO2vK-sPV2YwoeMM2jQc
+Content-Type: application/json
+
+{
+  "type": "expenses",
+  "category": "fees",
+  "amount": 5000,
+  "date": "2024-6-20",
+  "description": "school"
+}
+###
+GET http://localhost:3000/transactions/2
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFzbWFTaGFpayIsImlhdCI6MTcyOTc3MDk3MH0.ZCCIAs4JmxDHAAnQC6koQLgnO2vK-sPV2YwoeMM2jQc
+
+###
+PUT  http://localhost:3000/transactions/3
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFzbWFTaGFpayIsImlhdCI6MTcyOTc3MDk3MH0.ZCCIAs4JmxDHAAnQC6koQLgnO2vK-sPV2YwoeMM2jQc
+Content-Type: application/json
+
+{
+  "type": "expenses",
+  "category": "bill",
+  "amount": 22000,
+  "date": "2024-6-20",
+  "description": "shopping"
+}
+
+###
+DELETE http://localhost:3000/transactions/4
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFzbWFTaGFpayIsImlhdCI6MTcyOTc3MDk3MH0.ZCCIAs4JmxDHAAnQC6koQLgnO2vK-sPV2YwoeMM2jQc
